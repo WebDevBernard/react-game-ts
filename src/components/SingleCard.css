@@ -1,0 +1,70 @@
+.card {
+  position: relative;
+  user-select: none;
+}
+
+.card img {
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.card .front {
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+
+.flipped .front {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.card .back {
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back {
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.card .rotate:hover {
+  animation: rotateAnimation 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate;
+}
+
+.card .bounce {
+  animation: bounce 1s ease-in-out 2;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
+
+.card .victory {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Bounce up */
+  }
+}
