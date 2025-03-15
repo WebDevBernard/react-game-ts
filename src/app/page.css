@@ -1,12 +1,12 @@
 .card-grid {
-  margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
   background-color: #cbd5e1;
   box-shadow: 0 6px 0 #1e293b;
   border: 2px solid #1e293b;
-  margin-bottom: 1rem; /* space-y-4 */
+  margin-top: 24px;
+  margin-bottom: 24px; /* space-y-4 */
   border-radius: 0.75rem; /* rounded-xl */
   padding: 24px 24px;
   position: relative;

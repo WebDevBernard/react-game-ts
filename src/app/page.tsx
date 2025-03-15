@@ -21,14 +21,7 @@ function App() {
           ? "Flip the Pokeball to find a matching Pokemon"
           : `It only took you ${turns} turns this time!`}
       </h1>
-      <a
-        href="https://www.flaticon.com/free-icons/pokemon"
-        title="pokemon icons"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Pokemon icons created by Roundicons Freebies - Flaticon
-      </a>
+
       <span className="menu">
         <button className="custom-button" onClick={shuffleCards}>
           <img className="front" src="/pokemon.svg" alt="pokemon" />{" "}
@@ -47,6 +40,14 @@ function App() {
           />
         ))}
       </div>
+      <a
+        href="https://www.flaticon.com/free-icons/pokemon"
+        title="pokemon icons"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pokemon icons created by Roundicons Freebies - Flaticon
+      </a>
     </div>
   );
 }
