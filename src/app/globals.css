@@ -50,6 +50,7 @@ a {
   }
 
   a {
-    font-size: 0.5rem; /* Further reduce font size */
+    font-size: 0.75rem; /* Further reduce font size */
+    margin-bottom: 16px;
   }
 }
