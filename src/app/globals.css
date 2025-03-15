@@ -41,7 +41,7 @@ a {
   }
 
   h1 {
-    font-size: 1.25rem; /* Further reduce font size on very small screens */
+    font-size: 0.75rem; /* Further reduce font size on very small screens */
   }
 
   p {
