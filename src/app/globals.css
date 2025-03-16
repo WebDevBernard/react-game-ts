@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 1.75rem; /* text-4xl */
+  font-size: 1.5rem; /* text-4xl */
   font-weight: 600; /* font-semibold */
   text-align: center; /* text-center */
   letter-spacing: -0.025em; /* tracking-tighter */

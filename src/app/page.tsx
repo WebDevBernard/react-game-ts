@@ -12,16 +12,12 @@ function App() {
     victory,
     shuffleCards,
     handleChoice,
+    message,
   } = useGame();
 
   return (
     <div>
-      <h1>
-        {!victory
-          ? "Flip the Pokeball to find a matching Pokemon"
-          : `It only took you ${turns} turns this time!`}
-      </h1>
-
+      <h1>{message}</h1>
       <span className="menu">
         <button className="custom-button" onClick={shuffleCards}>
           <img className="front" src="/pokemon.svg" alt="pokemon" />{" "}
