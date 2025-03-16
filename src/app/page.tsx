@@ -5,7 +5,6 @@ import { useGame } from "@/hooks/useGame";
 function App() {
   const {
     cards,
-    turns,
     choiceOne,
     choiceTwo,
     disabled,
