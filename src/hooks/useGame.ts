@@ -10,6 +10,7 @@ export function useGame() {
   const [disabled, setDisabled] = useState<boolean>(false);
   const [victory, setVictory] = useState<boolean>(false);
   const [shuffling, setShuffling] = useState<boolean>(false);
+  const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
   const [gameData, setGameData] = useState<{
     highScore: number;
     gamesPlayed: number;
@@ -22,15 +23,19 @@ export function useGame() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
 
-    setShuffling(true);
+    // Only trigger bounce animation if not initial load
+    if (!isInitialLoad) {
+      setShuffling(true);
+      // Reset shuffling state after animation completes
+      setTimeout(() => setShuffling(false), 1000);
+    }
+
     setVictory(false);
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
-
-    // Reset shuffling state after animation completes
-    setTimeout(() => setShuffling(false), 1000);
+    setIsInitialLoad(false);
   };
 
   // Handle a card choice

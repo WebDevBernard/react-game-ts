@@ -15,6 +15,8 @@
     padding: 8px 0;
     overflow: hidden !important;
     overflow-y: hidden !important;
+    height: 100vh;
+    height: 100dvh;
     max-height: 100vh;
     max-height: 100dvh;
   }
@@ -38,7 +40,7 @@
 @media (max-width: 480px) {
   .card-grid {
     grid-gap: 8px;
-    margin-top: 8px;
+    margin-top: 16px;
     margin-bottom: 8px;
     padding: 12px;
     box-shadow: 0 3px 0 #1e293b;

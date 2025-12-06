@@ -38,13 +38,12 @@ a {
 
 @media (max-width: 480px) {
   html {
-    overscroll-behavior: contain;
-    overflow: hidden;
+    overscroll-behavior-y: auto;
+    overscroll-behavior-x: none;
   }
 
   body {
     padding: 0px; /* Reduce padding even more for very small screens */
-    overflow: hidden;
   }
 
   h1 {
