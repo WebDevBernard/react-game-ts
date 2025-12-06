@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem; /* text-4xl */
+  font-size: 20px; /* text-4xl */
   font-weight: 600; /* font-semibold */
   text-align: center; /* text-center */
   letter-spacing: -0.025em; /* tracking-tighter */
@@ -28,7 +28,7 @@ p {
 }
 
 a {
-  font-size: 1rem;
+  font-size: 12px;
   color: #3f3f46;
   text-decoration: none;
 
@@ -39,21 +39,23 @@ a {
 @media (max-width: 480px) {
   html {
     overscroll-behavior: contain;
+    overflow: hidden;
   }
 
   body {
     padding: 0px; /* Reduce padding even more for very small screens */
+    overflow: hidden;
   }
 
   h1 {
-    font-size: 1rem; /* Further reduce font size on very small screens */
+    font-size: 14px; /* Further reduce font size on very small screens */
   }
 
   p {
-    font-size: 0.75rem; /* Further reduce font size */
+    font-size: 10px; /* Further reduce font size */
   }
 
   a {
-    font-size: 0.75rem; /* Further reduce font size */
+    font-size: 10px; /* Further reduce font size */
   }
 }

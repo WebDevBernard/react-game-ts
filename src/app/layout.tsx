@@ -9,7 +9,7 @@ const font = Reddit_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "React Game",
+  title: "Collector Kojo's Shell Game",
   description: "A React memory game",
 };
 

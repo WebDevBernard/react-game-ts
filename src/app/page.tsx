@@ -9,13 +9,14 @@ function App() {
     choiceTwo,
     disabled,
     victory,
+    shuffling,
     shuffleCards,
     handleChoice,
     message,
   } = useGame();
 
   return (
-    <div>
+    <div className="game-container">
       <h1>{message}</h1>
       <span className="menu">
         <button className="custom-button" onClick={shuffleCards}>
@@ -32,6 +33,7 @@ function App() {
             flipped={card === choiceOne || card === choiceTwo || card.matched}
             disabled={disabled}
             victory={victory}
+            shuffling={shuffling}
           />
         ))}
       </div>

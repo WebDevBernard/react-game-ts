@@ -6,6 +6,7 @@ interface SingleCardProps {
   flipped: boolean;
   disabled: boolean;
   victory: boolean;
+  shuffling: boolean;
 }
 
 export default function SingleCard({
@@ -14,6 +15,7 @@ export default function SingleCard({
   flipped,
   disabled,
   victory,
+  shuffling,
 }: SingleCardProps) {
   const handleClick = () => {
     if (!disabled) {
@@ -32,7 +34,7 @@ export default function SingleCard({
           alt={card.name}
         />
         <img
-          className="back"
+          className={`back ${shuffling && !flipped ? "shuffle-bounce" : ""}`}
           src="/pokeball.svg"
           alt="card back"
           onClick={handleClick}

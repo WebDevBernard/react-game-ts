@@ -9,6 +9,7 @@ export function useGame() {
   const [choiceTwo, setChoiceTwo] = useState<Card | null>(null);
   const [disabled, setDisabled] = useState<boolean>(false);
   const [victory, setVictory] = useState<boolean>(false);
+  const [shuffling, setShuffling] = useState<boolean>(false);
   const [gameData, setGameData] = useState<{
     highScore: number;
     gamesPlayed: number;
@@ -21,11 +22,15 @@ export function useGame() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
 
+    setShuffling(true);
     setVictory(false);
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
     setTurns(0);
+
+    // Reset shuffling state after animation completes
+    setTimeout(() => setShuffling(false), 1000);
   };
 
   // Handle a card choice
@@ -128,6 +133,7 @@ export function useGame() {
     choiceTwo,
     disabled,
     victory,
+    shuffling,
     shuffleCards,
     handleChoice,
   };
