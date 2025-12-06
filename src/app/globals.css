@@ -63,5 +63,9 @@ a {
 
   a {
     font-size: 10px; /* Further reduce font size */
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    right: 0;
   }
 }

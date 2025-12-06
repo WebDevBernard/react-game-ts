@@ -15,6 +15,7 @@
     height: 100dvh;
     overflow-x: hidden;
     overflow-y: hidden;
+    position: relative;
   }
 }
 
