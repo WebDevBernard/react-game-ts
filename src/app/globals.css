@@ -2,11 +2,15 @@ html,
 body {
   max-width: 64rem;
   margin-inline: auto;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   display: flex;
   justify-content: center;
   padding: 16px 16px;
   height: 100%; /* Ensures the body covers full viewport height */
+}
+
+html {
+  overflow-x: hidden !important;
 }
 
 body {
