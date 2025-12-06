@@ -34,7 +34,7 @@
 
 @media (max-width: 480px) {
   .card-grid {
-    grid-gap: 12px;
+    grid-gap: 16px;
     margin-top: 16px;
     margin-bottom: 8px;
     margin-left: 0;
@@ -51,7 +51,7 @@
 }
 .menu {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
 }
