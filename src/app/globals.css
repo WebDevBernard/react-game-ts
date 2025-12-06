@@ -44,13 +44,16 @@ a {
   html {
     overscroll-behavior-y: auto;
     overscroll-behavior-x: none;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    width: 100vw;
   }
 
   body {
-    padding: 0px; /* Reduce padding even more for very small screens */
-    overflow-x: hidden;
-    overflow-y: hidden;
+    padding: 0px !important; /* Reduce padding even more for very small screens */
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    width: 100vw;
+    margin: 0;
   }
 
   h1 {
@@ -63,9 +66,11 @@ a {
 
   a {
     font-size: 10px; /* Further reduce font size */
-    position: absolute;
-    bottom: 4px;
+    position: fixed;
+    bottom: 8px;
     left: 0;
     right: 0;
+    width: 100%;
+    z-index: 100;
   }
 }
