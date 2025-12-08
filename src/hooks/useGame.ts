@@ -40,9 +40,9 @@ export function useGame() {
 
   // Handle a card choice
   const handleChoice = (card: Card) => {
-    choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
+    if (disabled) return; // ✅ prevents double turn increments
+  choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
   };
-
   // Reset the turn
   const resetTurn = () => {
     setChoiceOne(null);
