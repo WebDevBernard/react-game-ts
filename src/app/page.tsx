@@ -17,6 +17,14 @@ function App() {
 
   return (
     <div className="game-container">
+      <a
+        href="https://www.flaticon.com/free-icons/pokemon"
+        title="pokemon icons"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Pokemon icons created by Roundicons Freebies - Flaticon
+      </a>
       <h1>{message}</h1>
       <span className="menu">
         <button className="custom-button" onClick={shuffleCards}>
@@ -37,14 +45,6 @@ function App() {
           />
         ))}
       </div>
-      <a
-        href="https://www.flaticon.com/free-icons/pokemon"
-        title="pokemon icons"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Pokemon icons created by Roundicons Freebies - Flaticon
-      </a>
     </div>
   );
 }

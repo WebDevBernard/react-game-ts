@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Reddit_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import DotBackground from "@/components/DotBackground";
 import "./globals.css";
 
-const font = Reddit_Sans({
+const font = DM_Sans({
   subsets: ["latin"],
   display: "swap",
-  weight: "400",
+  weight: "500",
 });
 
 export const metadata: Metadata = {
-  title: "Collector Kojo's Shell Game",
+  title: "Net Ninja's Memory Game",
   description: "A React memory game",
 };
 
@@ -19,8 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${font.className}`}>{children}</body>
+    <html lang="en" className="hero-bg">
+      <body className={`${font.className}`}>
+        <DotBackground />
+        {children}
+      </body>
     </html>
   );
 }
